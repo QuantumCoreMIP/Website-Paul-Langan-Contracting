@@ -57,6 +57,43 @@
   </script>
 </head>
 <body data-page="home">
+  <!-- First-visit intro / loading animation (once per session; respects reduced-motion) -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__stage">
+      <span class="intro__kicker">Serving the Lowcountry Since 1989</span>
+      <img class="intro__logo" src="assets/img/logo@2x.png" alt="Paul Langan Contracting &amp; Painting" width="500" height="300" />
+      <div class="intro__rule" aria-hidden="true"></div>
+      <p class="intro__tag">Turnkey Renovations. One Trusted Team.</p>
+    </div>
+    <button class="intro__skip" type="button" onclick="window.__skipIntro&&window.__skipIntro()">Skip</button>
+  </div>
+  <script>
+  (function () {
+    var intro = document.getElementById('intro');
+    if (!intro) return;
+    var reduce = false, seen = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    try { seen = sessionStorage.getItem('plcIntro') === '1'; } catch (e) {}
+    if (reduce || seen) { if (intro.parentNode) intro.parentNode.removeChild(intro); return; }
+    try { sessionStorage.setItem('plcIntro', '1'); } catch (e) {}
+    document.documentElement.classList.add('intro-lock');
+    intro.style.display = 'flex';
+    intro.setAttribute('aria-hidden', 'false');
+    requestAnimationFrame(function () { requestAnimationFrame(function () { intro.classList.add('run'); }); });
+    var ended = false;
+    function end() {
+      if (ended) return; ended = true;
+      intro.classList.add('done');
+      setTimeout(function () {
+        document.documentElement.classList.remove('intro-lock');
+        if (intro.parentNode) intro.parentNode.removeChild(intro);
+      }, 850);
+    }
+    window.__skipIntro = end;
+    setTimeout(end, 2600);
+  })();
+  </script>
+
   <div id="site-header"></div>
 
   <!-- Hero -->
