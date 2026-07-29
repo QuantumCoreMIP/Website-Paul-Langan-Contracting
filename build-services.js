@@ -208,7 +208,7 @@ const pageTemplate = (s, prev, next) => `<!DOCTYPE html>
         <span class="eyebrow">${s.title} in Hilton Head &amp; Bluffton</span>
         <h2>${s.closing}</h2>
         <p>${s.intro}</p>
-        <a class="btn btn--primary" href="../contact.html" style="margin-top:22px;">Request a Free Estimate</a>
+        <a class="btn btn--primary" href="/contact" style="margin-top:22px;">Request a Free Estimate</a>
       </div>
       <div class="split__media reveal">
         <img src="../assets/img/svc-${s.slug}.webp" alt="${s.title} by Paul Langan Contracting in Hilton Head &amp; Bluffton" loading="lazy" />
@@ -240,8 +240,8 @@ const pageTemplate = (s, prev, next) => `<!DOCTYPE html>
       <p class="lead reveal" style="margin-inline:auto;">Pair your ${s.title.toLowerCase()} with any of our other services and let a single
          team handle it all — permits, trades, and finishes included.</p>
       <div style="margin-top:28px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-        <a class="btn btn--primary reveal" href="../services.html">All Services</a>
-        <a class="btn btn--ghost reveal" href="../projects.html">See Our Work</a>
+        <a class="btn btn--primary reveal" href="/services">All Services</a>
+        <a class="btn btn--ghost reveal" href="/projects">See Our Work</a>
       </div>
     </div>
   </section>

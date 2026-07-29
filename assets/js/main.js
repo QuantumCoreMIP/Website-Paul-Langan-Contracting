@@ -30,7 +30,7 @@ const SERVICES = [
 /* Renders the photo service cards used on the home + services pages. */
 function serviceCardsHTML() {
   return SERVICES.map(s => `
-    <a class="service-card" href="${DEPTH}services/${s.slug}.html">
+    <a class="service-card" href="/services/${s.slug}">
       <span class="service-card__media">
         <img src="${DEPTH}assets/img/${s.img}" alt="${s.title}" loading="lazy" />
       </span>
@@ -42,10 +42,18 @@ function serviceCardsHTML() {
     </a>`).join("");
 }
 
-/* Resolve relative paths whether we're at root or inside /services/ */
+/* Resolve paths. Page links use clean, root-absolute, extension-less URLs
+   (Render rewrites /about -> /about.html, /services/roofing -> …html, etc.);
+   asset paths stay depth-relative so they resolve at root or inside /services/. */
 const DEPTH = location.pathname.replace(/\/+$/, "/").includes("/services/") ? "../" : "";
-const url = (p) => DEPTH + p;
-const svc = (slug) => DEPTH + "services/" + slug + ".html";
+const url = (p) => {
+  if (/\.html$/.test(p)) {
+    const name = p.replace(/\.html$/, "");
+    return name === "index" ? "/" : "/" + name;
+  }
+  return DEPTH + p; // asset (image/favicon) — keep depth-relative
+};
+const svc = (slug) => "/services/" + slug;
 
 function buildHeader() {
   const dd = SERVICES.map(s => `<a href="${svc(s.slug)}">${s.title}</a>`).join("");

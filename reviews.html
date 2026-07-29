@@ -43,8 +43,9 @@
       <p class="lead reveal" style="margin-inline:auto;">Reviews help other Lowcountry homeowners find a contractor they can trust.
          We'd be grateful if you left us a few words.</p>
       <div style="margin-top:26px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-        <a class="btn btn--primary reveal" href="https://www.facebook.com/paullangancontracting/" target="_blank" rel="noopener">Review on Facebook</a>
-        <a class="btn btn--ghost reveal" href="https://www.instagram.com/langancontractinghhi/" target="_blank" rel="noopener">Follow on Instagram</a>
+        <a class="btn btn--primary reveal" href="https://g.page/r/CZr2fnYsjhKZEAE/review" target="_blank" rel="noopener">Review us on Google</a>
+        <a class="btn btn--ghost reveal" href="https://www.facebook.com/PaulLanganContracting/reviews/" target="_blank" rel="noopener">Review on Facebook</a>
+        <a class="btn btn--ghost reveal" href="https://www.yelp.com/writeareview/biz/slupeVtlpqIWf17eUM7prw" target="_blank" rel="noopener">Review on Yelp</a>
       </div>
     </div>
   </section>
@@ -53,7 +54,7 @@
     <div class="wrap center">
       <h2 class="reveal">Ready to Join Them?</h2>
       <p class="reveal">Get a free estimate and experience the Langan difference for yourself.</p>
-      <a class="btn btn--dark btn--lg reveal" href="contact.html">Request a Free Estimate</a>
+      <a class="btn btn--dark btn--lg reveal" href="/contact">Request a Free Estimate</a>
     </div>
   </section>
 
@@ -61,14 +62,16 @@
   <script src="assets/js/main.js?v=10"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Genuine testimonials published on the company's original site
-      // (paullangancontracting.com). The source does not publish reviewer
-      // names or locations, so attribution is left generic on purpose —
-      // swap in full Google / Facebook reviews (real name + rating) when available.
+      // Real, named 5-star testimonials as published on the company's own
+      // reviews page (paullangancontracting.com/reviews). More are available
+      // there — add them here as desired.
       const reviews = [
-        { t: "Everything was as promised and the house looks terrific. Exceptional quality and attention to detail. We could not be any happier.", a: "Verified client", l: "" },
-        { t: "Paul is the 'go to' guy for painting in the Lowcountry.", a: "Verified client", l: "" },
-        { t: "Langan Contracting is consistently reliable and takes great pride in their workmanship.", a: "Verified client", l: "" },
+        { t: "Paul is the 'go to' guy for painting in the Lowcountry.", a: "Mike Reynolds", l: "MJR Builders" },
+        { t: "Langan Contracting is consistently reliable and takes great pride in their workmanship.", a: "Dan Lawrence", l: "Lawrence Construction" },
+        { t: "Spectacular job by highly capable craftsmen. They worked in a very small space, transforming a wet bar into a beautiful bathroom.", a: "Veronica W.", l: "" },
+        { t: "Paul's team is very professional. They stay on your project until work is complete. No surprises. Would recommend.", a: "Cheri Manzinger", l: "" },
+        { t: "When we need some work completed, we call Paul. His staff are top of the line professionals.", a: "J. David Hatcher", l: "" },
+        { t: "Great work, prompt response, very reasonable and a pleasure to deal with!", a: "Richard H.", l: "" },
       ];
       const g = document.getElementById("reviewGrid");
       if (g) g.innerHTML = reviews.map(r => `
