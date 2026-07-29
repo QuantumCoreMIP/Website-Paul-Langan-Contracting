@@ -120,7 +120,7 @@ p { color: var(--slate); }
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; }
 .brand { display: flex; align-items: center; }
-.brand__logo { height: 58px; width: auto; display: block; }
+.brand__logo { height: 78px; width: auto; display: block; }
 
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a {
