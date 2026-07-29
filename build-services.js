@@ -12,10 +12,10 @@ const SERVICES = [
     title: "Renovations & Remodeling",
     tagline: "Kitchens, bathrooms, and whole-home remodels handled start to finish.",
     intro:
-      "Whether you're dreaming of a brighter kitchen, a spa-like bathroom, or a full main-floor reimagining, our team manages every phase — design input, demolition, construction, and finishes — so your remodel runs smoothly and finishes beautifully.",
+      "Whether you're dreaming of a brighter kitchen, a spa-like bathroom, or a full main-floor reimagining, our team manages every phase: design input, demolition, construction, and finishes, so your remodel runs smoothly and finishes beautifully.",
     features: [
-      "Kitchen remodels — cabinets, counters, islands & lighting",
-      "Bathroom renovations — tile, vanities, showers & fixtures",
+      "Kitchen remodels, cabinets, counters, islands & lighting",
+      "Bathroom renovations, tile, vanities, showers & fixtures",
       "Whole-home and open-concept transformations",
       "Flooring, drywall, trim, and interior painting",
       "Coordinated plumbing and electrical updates",
@@ -28,7 +28,7 @@ const SERVICES = [
     slug: "additions",
     nav: "Additions",
     title: "Home Additions",
-    tagline: "Add the square footage your family needs — seamlessly matched to your home.",
+    tagline: "Add the square footage your family needs, seamlessly matched to your home.",
     intro:
       "Growing family, home office, sunroom, or in-law suite? We design and build additions that look like they were always part of the house, matching rooflines, materials, and finishes inside and out.",
     features: [
@@ -48,7 +48,7 @@ const SERVICES = [
     title: "Interior & Exterior Painting",
     tagline: "Clean lines, durable finishes, and meticulous prep on every surface.",
     intro:
-      "Paint is where craftsmanship shows. We prep thoroughly, protect your furnishings and landscaping, and apply premium coatings built to hold up against Lowcountry sun, humidity, and salt air — for interiors and exteriors alike.",
+      "Paint is where craftsmanship shows. We prep thoroughly, protect your furnishings and landscaping, and apply premium coatings built to hold up against Lowcountry sun, humidity, and salt air, for interiors and exteriors alike.",
     features: [
       "Interior walls, ceilings, trim & doors",
       "Exterior siding, trim, and soffits",
@@ -66,7 +66,7 @@ const SERVICES = [
     title: "Custom Cabinets",
     tagline: "Brooklyn & Shaker Premier Series cabinetry, built for your space.",
     intro:
-      "Cabinets set the tone for a kitchen or bath. We offer our Brooklyn Premier and Shaker Premier Series lines — quality construction and timeless styles — expertly measured and installed for a built-in, custom look.",
+      "Cabinets set the tone for a kitchen or bath. We offer our Brooklyn Premier and Shaker Premier Series lines, quality construction and timeless styles, expertly measured and installed for a built-in, custom look.",
     features: [
       "Brooklyn Premier Series cabinetry",
       "Shaker Premier Series cabinetry",
@@ -84,7 +84,7 @@ const SERVICES = [
     title: "Carpentry",
     tagline: "Trim, framing, built-ins, and finish carpentry done right.",
     intro:
-      "From rough framing to the finest finish details, our carpenters bring precision to every cut. If it's made of wood, we can build, repair, or restore it — inside your home or out.",
+      "From rough framing to the finest finish details, our carpenters bring precision to every cut. If it's made of wood, we can build, repair, or restore it, inside your home or out.",
     features: [
       "Custom trim, crown molding & wainscoting",
       "Built-in shelving, benches & mantels",
@@ -102,7 +102,7 @@ const SERVICES = [
     title: "Concrete Work",
     tagline: "Driveways, patios, foundations, and structural concrete.",
     intro:
-      "Solid concrete work is the foundation of a lasting project — literally. We form, pour, and finish flatwork and structural concrete built to withstand the Lowcountry's shifting soils and weather.",
+      "Solid concrete work is the foundation of a lasting project, literally. We form, pour, and finish flatwork and structural concrete built to withstand the Lowcountry's shifting soils and weather.",
     features: [
       "Driveways, walkways & sidewalks",
       "Patios and outdoor slabs",
@@ -156,7 +156,7 @@ const SERVICES = [
     title: "Commercial Services",
     tagline: "Build-outs, renovations, and maintenance for commercial property.",
     intro:
-      "We help Lowcountry business owners and property managers keep their spaces sharp and functional — from tenant build-outs and remodels to ongoing repairs and maintenance, completed with minimal disruption to your operation.",
+      "We help Lowcountry business owners and property managers keep their spaces sharp and functional, from tenant build-outs and remodels to ongoing repairs and maintenance, completed with minimal disruption to your operation.",
     features: [
       "Tenant improvements & build-outs",
       "Office and retail renovations",
@@ -175,7 +175,7 @@ const pageTemplate = (s, prev, next) => `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${s.title} | Paul Langan Contracting &amp; Painting — Hilton Head &amp; Bluffton, SC</title>
+  <title>${s.title} | Paul Langan Contracting &amp; Painting, Hilton Head &amp; Bluffton, SC</title>
   <meta name="description" content="${s.tagline} Serving Hilton Head Island & Bluffton, SC since 1989. Call 843-686-4572 for a free estimate." />
   <link rel="canonical" href="https://paullangancontracting.com/services/${s.slug}" />
   <meta property="og:type" content="website" />
@@ -238,7 +238,7 @@ const pageTemplate = (s, prev, next) => `<!DOCTYPE html>
       <span class="eyebrow reveal">One trusted team</span>
       <h2 class="reveal">Every Trade Under One Roof</h2>
       <p class="lead reveal" style="margin-inline:auto;">Pair your ${s.title.toLowerCase()} with any of our other services and let a single
-         team handle it all — permits, trades, and finishes included.</p>
+         team handle it all, permits, trades, and finishes included.</p>
       <div style="margin-top:28px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
         <a class="btn btn--primary reveal" href="/services">All Services</a>
         <a class="btn btn--ghost reveal" href="/projects">See Our Work</a>
@@ -249,7 +249,7 @@ const pageTemplate = (s, prev, next) => `<!DOCTYPE html>
   <section class="section cta-band">
     <div class="wrap center">
       <h2 class="reveal">Let's Talk About Your Project</h2>
-      <p class="reveal">Call for a free, no-obligation estimate — we serve all of Hilton Head Island and Bluffton.</p>
+      <p class="reveal">Call for a free, no-obligation estimate, we serve all of Hilton Head Island and Bluffton.</p>
       <a class="btn btn--dark btn--lg reveal" href="tel:+18436864572">Call (843) 686-4572</a>
     </div>
   </section>
@@ -271,4 +271,4 @@ SERVICES.forEach((s, i) => {
   console.log("wrote services/" + s.slug + ".html");
 });
 
-console.log("Done — " + SERVICES.length + " service pages generated.");
+console.log("Done, " + SERVICES.length + " service pages generated.");

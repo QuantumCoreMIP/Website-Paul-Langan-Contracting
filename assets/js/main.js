@@ -1,5 +1,5 @@
 /* =========================================================================
-   Paul Langan Contracting & Painting — shared site logic
+   Paul Langan Contracting & Painting, shared site logic
    Injects the header + footer on every page and wires up interactions.
    ========================================================================= */
 
@@ -51,7 +51,7 @@ const url = (p) => {
     const name = p.replace(/\.html$/, "");
     return name === "index" ? "/" : "/" + name;
   }
-  return DEPTH + p; // asset (image/favicon) — keep depth-relative
+  return DEPTH + p; // asset (image/favicon), keep depth-relative
 };
 const svc = (slug) => "/services/" + slug;
 
@@ -75,7 +75,7 @@ function buildHeader() {
   </div>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="${url('index.html')}" aria-label="Paul Langan Contracting & Painting — home">
+      <a class="brand" href="${url('index.html')}" aria-label="Paul Langan Contracting & Painting, home">
         <img class="brand__logo" src="${url('assets/img/logo.png')}" srcset="${url('assets/img/logo.png')} 1x, ${url('assets/img/logo@2x.png')} 2x" alt="Paul Langan Contracting & Painting" width="150" height="90" />
       </a>
       <nav class="nav" id="nav">

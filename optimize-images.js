@@ -74,5 +74,5 @@ const MAP = [
     console.log(`ok   ${outName}  (${kb} KB)`);
     ok++;
   }
-  console.log(`\nDone — ${ok} optimized, ${miss} missing.`);
+  console.log(`\nDone: ${ok} optimized, ${miss} missing.`);
 })();
