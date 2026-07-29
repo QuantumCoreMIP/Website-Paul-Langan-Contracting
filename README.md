@@ -9,9 +9,12 @@ framework and no build step required to run.
 - Shared header/footer injected by `assets/js/main.js` (single source of truth in `SITE` + `SERVICES`)
 - Google Fonts (Inter + Poppins), CSS custom-property design system
 - Mobile nav, scroll reveal animations, and a client-side contact form
-- Hero background video (`assets/video/hero.mp4` + `.webm`) — a muted, looping
-  Ken Burns clip rendered from the company's own project photos via ffmpeg
-  (`build-hero-video` recipe); falls back to `hero-poster.jpg` for reduced-motion
+- Hero background is a pure-CSS crossfade slideshow of five project photos
+  (`assets/img/hero-1…5.webp`), gated on `prefers-reduced-motion`
+- SEO: per-page `<title>`/meta/canonical + Open Graph & Twitter tags, a
+  `GeneralContractor` JSON-LD schema on the home page, `sitemap.xml`, `robots.txt`,
+  and a 1200×630 social share image (`assets/img/og-default.png`)
+- Clean, extension-less URLs served by `render.yaml` rewrites (e.g. `/about`, `/services/roofing`)
 
 ## Pages / Tabs
 | Tab | File |
@@ -66,8 +69,17 @@ This repo includes `render.yaml`. To deploy:
 > Render service — see the `<form id="contactForm">` in `contact.html`.
 
 ## TODO before launch
-- [ ] Add real project photos to `assets/img/` and update `projects.html`
-- [ ] Replace sample reviews with real ones in `reviews.html`
-- [ ] Connect the contact form to a real email/backend
-- [ ] Add a logo/favicon
-- [ ] Confirm business address & hours
+- [ ] **Wire the contact form to a real backend** (Formspree / Web3Forms). It currently
+      shows a success message but submits nowhere — every lead is dropped. Highest priority.
+- [ ] Pull full Google / Facebook reviews (real names + ratings) into `reviews.html`.
+      It now shows the three genuine testimonials from the original site as a starting point.
+- [ ] Add more real project photos to `projects.html` as they become available.
+- [ ] Confirm business hours (not published on the original site).
+
+## Verified against the live site (paullangancontracting.com)
+Every business fact on the rebuild was checked against the original site and third-party
+sources: phone `843-686-4572`, email `paullangan@outlook.com`, address
+`130 Matthews Drive, Suite C, Hilton Head Island, SC 29926`, "since 1989",
+SC Residential Builders License `#SC13752`, Town of Hilton Head `#3208`,
+Town of Bluffton `#020777`, Beaufort County `#10081`, Chamber of Commerce membership,
+the service list, brand logos, and the Facebook/Instagram links. No business data was invented.

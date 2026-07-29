@@ -42,3 +42,31 @@ services:
       - type: rewrite
         source: /contact
         destination: /contact.html
+      # Service sub-pages
+      - type: rewrite
+        source: /services/renovations
+        destination: /services/renovations.html
+      - type: rewrite
+        source: /services/additions
+        destination: /services/additions.html
+      - type: rewrite
+        source: /services/painting
+        destination: /services/painting.html
+      - type: rewrite
+        source: /services/cabinets
+        destination: /services/cabinets.html
+      - type: rewrite
+        source: /services/carpentry
+        destination: /services/carpentry.html
+      - type: rewrite
+        source: /services/concrete
+        destination: /services/concrete.html
+      - type: rewrite
+        source: /services/roofing
+        destination: /services/roofing.html
+      - type: rewrite
+        source: /services/disinfecting
+        destination: /services/disinfecting.html
+      - type: rewrite
+        source: /services/commercial
+        destination: /services/commercial.html

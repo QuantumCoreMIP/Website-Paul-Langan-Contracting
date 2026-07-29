@@ -11,3 +11,9 @@ package-lock.json
 # Full-res original photos downloaded from the live site — kept locally only.
 # The optimized, web-sized versions in assets/img/ ARE committed.
 assets/img/original/
+
+# Local dev tooling (preview server config)
+.claude/
+
+# Private work journal — local only, never commit
+STATUS.md

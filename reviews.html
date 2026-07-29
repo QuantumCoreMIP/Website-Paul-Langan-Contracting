@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reviews | Paul Langan Contracting &amp; Painting — Hilton Head &amp; Bluffton, SC</title>
   <meta name="description" content="See what Hilton Head and Bluffton homeowners say about Paul Langan Contracting & Painting — quality remodeling, painting, and carpentry since 1989." />
+  <link rel="canonical" href="https://paullangancontracting.com/reviews" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Paul Langan Contracting &amp; Painting" />
+  <meta property="og:url" content="https://paullangancontracting.com/reviews" />
+  <meta property="og:title" content="Reviews | Paul Langan Contracting &amp; Painting" />
+  <meta property="og:description" content="What Hilton Head &amp; Bluffton homeowners say about Paul Langan Contracting &amp; Painting — quality work since 1989." />
+  <meta property="og:image" content="https://paullangancontracting.com/assets/img/og-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://paullangancontracting.com/assets/img/og-default.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -17,7 +26,7 @@
     <div class="page-banner__media" style="background-image:url('assets/img/proj-bath-1.webp')"></div>
     <div class="wrap">
       <h1>Client Reviews</h1>
-      <p>Three decades of happy homeowners across the Lowcountry. These are sample testimonials — replace them with your real Google &amp; Facebook reviews.</p>
+      <p>Three decades of happy homeowners across the Lowcountry — in their own words.</p>
     </div>
   </section>
 
@@ -52,20 +61,21 @@
   <script src="assets/js/main.js?v=10"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Genuine testimonials published on the company's original site
+      // (paullangancontracting.com). The source does not publish reviewer
+      // names or locations, so attribution is left generic on purpose —
+      // swap in full Google / Facebook reviews (real name + rating) when available.
       const reviews = [
-        { t: "Paul and his crew remodeled our kitchen and two bathrooms. The craftsmanship was outstanding and they kept us informed at every step.", a: "Homeowner", l: "Hilton Head Island, SC" },
-        { t: "Professional, punctual, and genuinely skilled. Our exterior painting and carpentry repairs look better than new.", a: "Homeowner", l: "Bluffton, SC" },
-        { t: "After 35 years in business it really shows — honest pricing, beautiful work, and a team you can trust in your home.", a: "Property Owner", l: "Lowcountry, SC" },
-        { t: "They handled our addition from permits to final paint. Everything blended perfectly with the original house.", a: "Homeowner", l: "Hilton Head Island, SC" },
-        { t: "The new cabinets transformed our kitchen. Precise install and a beautiful finish. Highly recommend.", a: "Homeowner", l: "Bluffton, SC" },
-        { t: "Reliable, tidy, and easy to communicate with. Our commercial build-out finished on schedule with no surprises.", a: "Business Owner", l: "Hilton Head Island, SC" },
+        { t: "Everything was as promised and the house looks terrific. Exceptional quality and attention to detail. We could not be any happier.", a: "Verified client", l: "" },
+        { t: "Paul is the 'go to' guy for painting in the Lowcountry.", a: "Verified client", l: "" },
+        { t: "Langan Contracting is consistently reliable and takes great pride in their workmanship.", a: "Verified client", l: "" },
       ];
       const g = document.getElementById("reviewGrid");
       if (g) g.innerHTML = reviews.map(r => `
         <div class="review reveal">
           <div class="review__stars">★★★★★</div>
           <p>"${r.t}"</p>
-          <div class="review__author">${r.a}<span>${r.l}</span></div>
+          <div class="review__author">${r.a}${r.l ? `<span>${r.l}</span>` : ""}</div>
         </div>`).join("");
       initReveal();
     });
